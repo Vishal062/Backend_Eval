@@ -3,12 +3,12 @@ const bcryptjs = require("bcryptjs");
 
 //Create a schema for a usercollection
 
-const userSchema = new.mongoose.Schema({
-    name: { type: String, required: true },
+const userSchema = new mongoose.Schema({
+    //name: { type: String, required: true },
     email: { type: String, required: true },
     password: { type: String, required: true },
-    profil_pic: { type: URL, required: false },
-    roles: { type: String, required: true },
+    //profil_pic: { type: String, required: false },
+    //roles: { type: String, required: true },
 }, {
     versionKey: false,
     timestamp:true
@@ -31,7 +31,6 @@ userSchema.methods.checkPassword = function (password) {
 }
 
 //Connect the schema to the user collection
-
 const User = mongoose.model("user", userSchema);    //Users collection
 
 module.exports = User;
