@@ -9,7 +9,6 @@ function verifyToken(token) {
     });
   });
 }
-
 async function authenticate(req, res, next) {
   // If we have received the bearer token in the header
   const bearerToken = req.headers.authorization;

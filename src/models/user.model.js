@@ -4,11 +4,11 @@ const bcryptjs = require("bcryptjs");
 //Create a schema for a usercollection
 
 const userSchema = new mongoose.Schema({
-    //name: { type: String, required: true },
+    name: { type: String, required: true },
     email: { type: String, required: true },
     password: { type: String, required: true },
     //profil_pic: { type: String, required: false },
-    //roles: { type: String, required: true },
+    roles: { type: String, required: true },
 }, {
     versionKey: false,
     timestamp:true

@@ -11,5 +11,4 @@ app.post("/register", register);
 app.post("/login", login);
 app.use("/students", studentController)
 
-
 module.exports = app;
